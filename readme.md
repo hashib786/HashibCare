@@ -2,7 +2,8 @@
 
 Welcome to HashibCare, your trusted source for quality healthcare services. Our team of skilled medical professionals is dedicated to providing personalized care and support to meet your unique needs.
 
-#About Us
+## About Us
+
 At HashibCare, we believe that everyone deserves access to high-quality health care. That's why we're committed to delivering the best possible care and support to our patients. With state-of-the-art facilities, advanced technology, and compassionate staff, we're equipped to provide a wide range of medical services, from routine check-ups to emergency care.
 
 #Our Services
