@@ -1,4 +1,5 @@
-#HashibCare
+<h1>HashibCare</h1>
+
 Welcome to HashibCare, your trusted source for quality healthcare services. Our team of skilled medical professionals is dedicated to providing personalized care and support to meet your unique needs.
 
 #About Us
