@@ -1,0 +1,9 @@
+@mixin flexitem($jus:true, $ali:true){
+    display: flex;
+    @if($jus) {
+        justify-content: space-between;
+    }
+    @if($ali){
+        align-items: center;
+    }
+}

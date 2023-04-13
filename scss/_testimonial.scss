@@ -1,0 +1,59 @@
+#testimonial{
+   
+    
+    .testimonial__cards{
+        margin-top: 6.5rem;
+        margin-left: 3.1rem;
+        overflow-y: scroll;
+        padding-bottom: 2.1rem;
+        display: flex;
+        gap: 2.1rem;
+
+        .testimonial__card{
+            display: inline-block;
+            width: min(100%, 35rem);
+            background: $linear-gradiant;
+            padding: 1.6rem;
+            color: $col-white;
+            border-radius: 1.6rem;
+            flex: none;
+
+            .testimonial__para p{
+                margin-bottom: 1.6rem;
+            }
+
+            .testimonial__patient--detail{
+                @include flexitem(false);
+                gap: 2.1rem;
+
+                .patient__img img{
+                    width: 4.5rem;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    padding: .5rem;
+                    display: inline-block;
+                    border: 2px solid brown;
+                    transition: transform .2s ease-in-out;
+                    transform: scale(1);
+                }
+                
+            }
+            &:hover .testimonial__patient--detail .patient__img img{
+                transform: scale(1.2);
+            }
+        }
+
+        &::-webkit-scrollbar{
+            height: 0.8rem;
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-corner{
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb{
+            background: $linear-gradiant;
+            border-radius: 1.2rem;
+            cursor: pointer;
+        }
+    }
+}

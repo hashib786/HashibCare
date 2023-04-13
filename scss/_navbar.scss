@@ -1,0 +1,115 @@
+.navbar{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    @include flexitem();
+    background: $linear-gradiant;
+    color: $col-white;
+    padding: 1.8rem 15vh;
+    filter: drop-shadow(0px 7px 11px $col-black-primary);
+
+    @media screen and (max-width:1172px){
+        padding: 1.8rem 5vh;
+    }
+
+    .nav__logo{
+
+        .logo{
+            font-size: 2.6rem;
+            color: white
+        }
+    }
+
+    .nav__links{
+        @include flexitem();
+        flex: 1;
+        max-width: 70rem;
+
+        @media screen and (max-width:977px){
+            max-width: 60rem;
+        }
+
+        @media screen and (max-width:870px){
+            display: none;
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            right: 5vw;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 0.1rem;
+            perspective: 1100px;
+            transition: opacity .3s ease-in-out;
+            
+            &.active{
+                opacity: 1;
+                display: flex;
+            }
+        }
+
+        li{
+            @media screen and (max-width:870px){
+                background: $bg-secondery;
+                padding: 1.9rem;
+                width: 100%;
+                filter: drop-shadow(0px 0px 3px grey);
+                transform: rotateX(90deg);
+                opacity: 0;
+                animation: rotateAnimation .2s cubic-bezier(0.51, -0.14, 0.59, 1.26) forwards;
+                transform-origin: top;
+
+                &:nth-child(2){animation-delay: .1s;}
+                &:nth-child(3){animation-delay: .2s;}
+                &:nth-child(4){animation-delay: .3s;}
+                &:nth-child(5){animation-delay: .4s;}
+
+                &:last-child{
+                    background: $bg-secondery2;
+                }
+
+
+                @keyframes rotateAnimation {
+                    to{
+                        opacity: 1;
+                        transform: rotateX(0deg);
+                    }
+                } 
+            }
+            .nav__link{
+                color: inherit;
+                font-size: 1.6rem;
+    
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+
+        .nav__link--btn{
+            vertical-align: center;
+
+            &:hover{
+                background: lighten($bg-secondery2, 10%);
+            }
+        }
+    }
+
+    .nav__hamburger{
+        display: none;
+
+        @media screen and (max-width:870px){
+            cursor: pointer;
+            display: block;
+
+            .hamburgerClass{
+                display: none;
+            }
+
+            .hamburgerClass.active{
+                display: block;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,45 @@
+#services{
+
+    .services__items{
+        margin-top: 6rem;
+        @include flexitem(false);
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4.2rem;
+
+        .service__item{
+            width: min(100%, 35rem);
+            background: $linear-gradiant;
+            padding: 1.8rem;
+            border-radius: 1.8rem;
+            filter: drop-shadow(3px 5px 6px black);
+            box-shadow: inset 0px 0px 24px #cbc7c77a;
+            transform: translateY(1);
+            transition: transform .2s ease-in-out;
+            @include flexitem(false, false);
+            gap: 2rem;
+            color: $col-white;
+
+            &:hover{
+                transform: translateY(-1rem);
+            }
+
+            .service__item--left{
+                span{
+                    font-size: 3rem;
+                }
+            }
+
+            .service__item--right{
+                .service__item--heading{
+                    font-size: 1.9rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .service__item--para{
+                    color: white;
+                }
+            }
+        }
+    }
+}
